@@ -3,6 +3,7 @@
 @section('title', 'Спортни събития')
 
 @section('content')
+   <h1 class="mb-4">Спортни събития и прояви</h1>
     <div class="card mb-4">
         <div class="card-header bg-primary text-white">
             <h5 class="mb-0">Филтриране на събития</h5>
