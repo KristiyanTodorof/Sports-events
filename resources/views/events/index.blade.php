@@ -84,7 +84,10 @@
             <div class="col-12">
                 <div class="alert alert-info">
                     Няма намерени събития.
-                </div>
+                </div><div class="alert alert-info">
+        <h4 class="alert-heading">Няма намерени събития</h4>
+        <p>В момента няма събития, отговарящи на зададените критерии.</p>
+    </div>
             </div>
         @endforelse
     </div>
