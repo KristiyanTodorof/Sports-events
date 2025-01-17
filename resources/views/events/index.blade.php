@@ -10,42 +10,52 @@
         </div>
         <div class="card-body">
         <form action="{{ route('events.index') }}" method="GET" class="row g-3">
-    <div class="col-md-3">
-        <label for="sport_id" class="form-label">Спорт</label>
-        <select name="sport_id" id="sport_id" class="form-select">
-            <option value="">Всички спортове</option>
-            @foreach($sports as $sport)
-                <option value="{{ $sport->id }}" {{ request('sport_id') == $sport->id ? 'selected' : '' }}>
-                    {{ $sport->name }}
-                </option>
-            @endforeach
-        </select>
+        <div class="card mb-4">
+    <div class="card-header bg-primary text-white">
+        <h5 class="mb-0">Търсене на събития</h5>
     </div>
+    <div class="card-body">
+        <form action="{{ route('events.index') }}" method="GET" class="row g-3">
+            <div class="col-md-3">
+                <label for="sport_id" class="form-label fw-bold">Избери спорт</label>
+                <select name="sport_id" id="sport_id" class="form-select">
+                    <option value="">Всички спортове</option>
+                    @foreach($sports as $sport)
+                        <option value="{{ $sport->id }}" {{ request('sport_id') == $sport->id ? 'selected' : '' }}>
+                            {{ $sport->name }}
+                        </option>
+                    @endforeach
+                </select>
+            </div>
 
-    <div class="col-md-3">
-        <label for="organizer_id" class="form-label">Организатор</label>
-        <select name="organizer_id" id="organizer_id" class="form-select">
-            <option value="">Всички организатори</option>
-            @foreach($organizers as $organizer)
-                <option value="{{ $organizer->id }}" {{ request('organizer_id') == $organizer->id ? 'selected' : '' }}>
-                    {{ $organizer->name }}
-                </option>
-            @endforeach
-        </select>
-    </div>
+            <div class="col-md-3">
+                <label for="organizer_id" class="form-label fw-bold">Избери организатор</label>
+                <select name="organizer_id" id="organizer_id" class="form-select">
+                    <option value="">Всички организатори</option>
+                    @foreach($organizers as $organizer)
+                        <option value="{{ $organizer->id }}" {{ request('organizer_id') == $organizer->id ? 'selected' : '' }}>
+                            {{ $organizer->name }}
+                        </option>
+                    @endforeach
+                </select>
+            </div>
 
-    <div class="col-md-3">
-        <label for="date" class="form-label">Дата</label>
-        <input type="date" class="form-control" id="date" name="date" value="{{ request('date') }}">
-    </div>
+            <div class="col-md-3">
+                <label for="date" class="form-label fw-bold">Избери дата</label>
+                <input type="date" class="form-control" id="date" name="date" value="{{ request('date') }}">
+            </div>
 
-    <div class="col-md-3 d-flex align-items-end">
-        <button type="submit" class="btn btn-primary me-2">Филтрирай</button>
-        <a href="{{ route('events.index') }}" class="btn btn-secondary">Изчисти</a>
+            <div class="col-md-3 d-flex align-items-end">
+                <button type="submit" class="btn btn-primary me-2">
+                    <i class="bi bi-search"></i> Търси
+                </button>
+                <a href="{{ route('events.index') }}" class="btn btn-secondary">
+                    <i class="bi bi-x-circle"></i> Изчисти
+                </a>
+            </div>
+        </form>
     </div>
-</form>
-        </div>
-    </div>
+</div>
 
     <div class="row g-4">
         @forelse($events as $event)
