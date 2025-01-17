@@ -92,18 +92,18 @@
 
     <!-- Footer -->
     <footer class="bg-dark text-white mt-5">
-        <div class="container py-4">
-            <div class="row">
-                <div class="col-md-6">
-                    <h5>СпортАрена</h5>
-                    <p>Вашият източник за спортни събития</p>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <p>&copy; {{ date('Y') }} Всички права запазени</p>
-                </div>
+    <div class="container py-4">
+        <div class="row">
+            <div class="col-md-6">
+                <h5>СпортАрена</h5>
+                <p>Вашият портал за спортни събития</p>
+            </div>
+            <div class="col-md-6 text-end">
+                <p>Свържете се с нас: info@sportarena.bg</p>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
     <!-- Bootstrap JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
