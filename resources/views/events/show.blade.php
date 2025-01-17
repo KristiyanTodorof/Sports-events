@@ -49,4 +49,7 @@
             </a>
         </div>
     </div>
+<div class="card-footer">
+    <small class="text-muted">Последно обновено: {{ $event->updated_at->format('d.m.Y H:i') }}</small>
+</div>
 @endsection
