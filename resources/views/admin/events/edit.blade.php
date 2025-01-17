@@ -8,10 +8,12 @@
 
         <div class="card">
             <div class="card-body">
+            <div class="alert alert-info mb-4">
+               <small>* Всички полета маркирани със звездичка са задължителни</small>
+            </div>
                 <form action="{{ route('admin.events.update', $event) }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
-                    
                     <div class="mb-3">
                         <label for="name" class="form-label">Име на събитието</label>
                         <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" value="{{ old('name', $event->name) }}" required>
