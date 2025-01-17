@@ -5,7 +5,12 @@
 @section('content')
     <div class="container-fluid">
         <h1 class="mb-4">Добави ново събитие</h1>
-
+    <div class="container-fluid">
+        <h1 class="mb-4">Добави ново събитие</h1>
+        <div class="card-header">
+    <h5 class="mb-0">Създаване на ново спортно събитие</h5>
+    <small class="text-muted">Попълнете всички задължителни полета</small>
+    </div>
         <div class="card">
             <div class="card-body">
                 <form action="{{ route('admin.events.store') }}" method="POST" enctype="multipart/form-data">
